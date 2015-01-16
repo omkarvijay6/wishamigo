@@ -33,6 +33,8 @@ gem 'rails_12factor', group: :production
 #bootstrap
 gem 'bootstrap-sass',       '3.2.0.0'
 
+#unicorn server instead of webric for production
+gem 'unicorn'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
