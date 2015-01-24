@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   
   get 'occasions' => 'home#occasions'
   get 'AboutUs' => 'home#about_us', as: 'about_us'
+  get 'ContactUs' => 'home#contact_us', as: 'contact_us'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
