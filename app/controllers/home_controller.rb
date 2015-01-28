@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
 
     def home
+    	@contact_us = ContactUs.new
     end
     
     def occasions
