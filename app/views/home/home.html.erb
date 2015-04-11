@@ -415,7 +415,12 @@
                     <% end %>
                   </p>
                   <div class="form-group">
-                      <%= f.text_field :event_date, :placeholder => "Event Date", :class => "form-control" %>
+                  <div class='input-group date' id='event_picker'>
+                        <%= f.text_field :event_date, :placeholder => "Event Date", :class => "form-control" %>
+                      <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                  </div>
                   </div>
 
                   <p class="help-block text-danger">
@@ -644,3 +649,9 @@
     
   </script>>
 <% end %>
+
+<script type="text/javascript">
+    $(function () {
+        $('#event_picker').datetimepicker();
+    });
+</script>

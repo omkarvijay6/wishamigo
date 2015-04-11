@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'bootstrap-datetimepicker';
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,4 +14,7 @@
  * file per style scope.
  *
  *= require_self
+ *= require bootstrap
+ *= require bootstrap-datetimepicker
+ *= require_tree .
  */

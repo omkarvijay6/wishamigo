@@ -12,3 +12,5 @@
 //
 //= require jquery
 //= require home
+//= require moment
+//= require bootstrap-datetimepicker

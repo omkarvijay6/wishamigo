@@ -52,3 +52,7 @@ ruby "2.1.2"
 
 #debugging
 gem 'pry'
+
+#Gems for datetime picket
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.7.14'
