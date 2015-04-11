@@ -404,6 +404,20 @@
                   <div class="form-group">
                       <%= f.text_field :occasion, :placeholder => "To whom you want to surprise *", :class => "form-control" %>
                   </div>
+
+                  <!-- Event date -->
+                  <p class="help-block text-danger">
+                    <% if @contact.errors.get(:event_date) %>
+                      <div class="alert alert-danger" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <%= @contact.errors.get(:event_date).first %>  
+                      </div>
+                    <% end %>
+                  </p>
+                  <div class="form-group">
+                      <%= f.text_field :event_date, :placeholder => "Event Date", :class => "form-control" %>
+                  </div>
+
                   <p class="help-block text-danger">
                     <% if @contact.errors.get(:description) %>
                       <div class="alert alert-danger" role="alert">
