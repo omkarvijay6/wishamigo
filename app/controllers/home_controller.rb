@@ -13,7 +13,7 @@ class HomeController < ApplicationController
     def contact
     	@contact = Contact.new(contact_params)
     	if @contact.save
-    		flash.notice = "Thank you for your request. Our team will contact you within 24 hours"
+    		flash.keep[:success] = "Thank you for your request. Our team will contact you within 24 hours"
     		redirect_to root_path
     	else
             @scroll_to = '#contact_us'
