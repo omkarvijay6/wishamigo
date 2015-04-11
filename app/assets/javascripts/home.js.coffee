@@ -1,6 +1,8 @@
 $ ->
   today = new Date()
-  event_picker = $("#event_picker").datetimepicker()
+  event_picker = $("#event_picker").datetimepicker({
+    format: "DD/MM/YYYY"
+  })
   event_picker.data("DateTimePicker").minDate today
 
 $(document).ready ->
