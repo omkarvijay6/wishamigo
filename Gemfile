@@ -48,3 +48,7 @@ gem 'unicorn'
 # gem 'debugger', group: [:development, :test]
 
 ruby "2.1.2"
+
+
+#debugging
+gem 'pry'
