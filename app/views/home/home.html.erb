@@ -359,12 +359,12 @@
       <div class="row">
           <div class="col-lg-12">
 
-              <%= form_for @contact_us, url: contact_us_path do |f| %>
+              <%= form_for @contact, url: contact_path do |f| %>
                   <p class="help-block text-danger">
-                    <% if @contact_us.errors.get(:name) %>
+                    <% if @contact.errors.get(:name) %>
                       <div class="alert alert-danger" role="alert">
                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <%= @contact_us.errors.get(:name).first %>  
+                        <%= @contact.errors.get(:name).first %>  
                       </div>
                     <% end %>
                   </p>
@@ -372,10 +372,10 @@
                       <%= f.text_field :name, :placeholder => "Your Name *", :class => "form-control" %>
                   </div>
                   <p class="help-block text-danger">
-                    <% if @contact_us.errors.get(:email) %>
+                    <% if @contact.errors.get(:email) %>
                       <div class="alert alert-danger" role="alert">
                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <%= @contact_us.errors.get(:email).first %>  
+                        <%= @contact.errors.get(:email).first %>  
                       </div>
                     <% end %>
                   </p>
@@ -383,10 +383,10 @@
                       <%= f.text_field :email, :placeholder => "Your Email *", :class => "form-control" %>
                   </div>
                   <p class="help-block text-danger">
-                    <% if @contact_us.errors.get(:phone) %>
+                    <% if @contact.errors.get(:phone) %>
                       <div class="alert alert-danger" role="alert">
                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <%= @contact_us.errors.get(:phone).first %>  
+                        <%= @contact.errors.get(:phone).first %>  
                       </div>
                     <% end %>
                   </p>
@@ -394,10 +394,10 @@
                       <%= f.text_field :phone, :placeholder => "Your Contact Number *", :class => "form-control" %>
                   </div>
                   <p class="help-block text-danger">
-                    <% if @contact_us.errors.get(:occasion) %>
+                    <% if @contact.errors.get(:occasion) %>
                       <div class="alert alert-danger" role="alert">
                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <%= @contact_us.errors.get(:occasion).first %>  
+                        <%= @contact.errors.get(:occasion).first %>  
                       </div>
                     <% end %>
                   </p>
@@ -405,10 +405,10 @@
                       <%= f.text_field :occasion, :placeholder => "To whom you want to surprise *", :class => "form-control" %>
                   </div>
                   <p class="help-block text-danger">
-                    <% if @contact_us.errors.get(:description) %>
+                    <% if @contact.errors.get(:description) %>
                       <div class="alert alert-danger" role="alert">
                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <%= @contact_us.errors.get(:description).first %>  
+                        <%= @contact.errors.get(:description).first %>  
                       </div>
                     <% end %>
                   </p>
