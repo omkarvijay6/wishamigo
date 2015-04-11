@@ -1,5 +1,5 @@
 class Contact < ActiveRecord::Base
-  validates :name, :phone, :occasion, presence: true
+  validates :name, :phone, :occasion, :event_date, presence: true
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 255 },
