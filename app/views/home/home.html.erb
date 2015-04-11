@@ -351,95 +351,112 @@
       <div class="row">
           <div class="col-lg-12 text-center">
               <h2 class="section-heading">Contact Us</h2>
-              <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+              <h3 class="section-subheading text-muted">One click away to make your special ones a special day. Our team will reach you within 24 hours</h3>
           </div>
       </div>
 
       <!-- ContactForm -->
-      <div class="row">
-          <div class="col-lg-12">
-
-              <%= form_for @contact, url: contact_path do |f| %>
-                  <p class="help-block text-danger">
-                    <% if @contact.errors.get(:name) %>
-                      <div class="alert alert-danger" role="alert">
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <%= @contact.errors.get(:name).first %>  
-                      </div>
-                    <% end %>
-                  </p>
-                  <div class="form-group">
-                      <%= f.text_field :name, :placeholder => "Your Name *", :class => "form-control" %>
-                  </div>
-                  <p class="help-block text-danger">
-                    <% if @contact.errors.get(:email) %>
-                      <div class="alert alert-danger" role="alert">
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <%= @contact.errors.get(:email).first %>  
-                      </div>
-                    <% end %>
-                  </p>
-                  <div class="form-group">
-                      <%= f.text_field :email, :placeholder => "Your Email *", :class => "form-control" %>
-                  </div>
-                  <p class="help-block text-danger">
-                    <% if @contact.errors.get(:phone) %>
-                      <div class="alert alert-danger" role="alert">
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <%= @contact.errors.get(:phone).first %>  
-                      </div>
-                    <% end %>
-                  </p>
-                  <div class="form-group">
-                      <%= f.text_field :phone, :placeholder => "Your Contact Number *", :class => "form-control" %>
-                  </div>
-                  <p class="help-block text-danger">
-                    <% if @contact.errors.get(:occasion) %>
-                      <div class="alert alert-danger" role="alert">
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <%= @contact.errors.get(:occasion).first %>  
-                      </div>
-                    <% end %>
-                  </p>
-                  <div class="form-group">
-                      <%= f.text_field :occasion, :placeholder => "To whom you want to surprise *", :class => "form-control" %>
-                  </div>
-
-                  <!-- Event date -->
-                  <p class="help-block text-danger">
-                    <% if @contact.errors.get(:event_date) %>
-                      <div class="alert alert-danger" role="alert">
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <%= @contact.errors.get(:event_date).first %>  
-                      </div>
-                    <% end %>
-                  </p>
-                  <div class="form-group">
-                  <div class='input-group date' id='event_picker'>
-                        <%= f.text_field :event_date, :placeholder => "Event Date", :class => "form-control" %>
-                      <span class="input-group-addon">
-                          <span class="glyphicon glyphicon-calendar"></span>
-                      </span>
-                  </div>
-                  </div>
-
-                  <p class="help-block text-danger">
-                    <% if @contact.errors.get(:description) %>
-                      <div class="alert alert-danger" role="alert">
-                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                        <%= @contact.errors.get(:description).first %>  
-                      </div>
-                    <% end %>
-                  </p>
-                  <div class="form-group">
-                      <%= f.text_area :description, :placeholder => "Your Message *", :class => "form-control" %>
-                  </div>
-                  <div class="col-lg-12 text-center">
-                          <div id="success"></div>
-                          <button type="submit" class="btn btn-xl">Send Message</button>
+      <%= form_for @contact, url: contact_path do |f| %>
+        <div class="row">
+          <div class="col-md-6">
+            
+            <!-- Name Field -->
+            <p class="help-block text-danger">
+              <% if @contact.errors.get(:name) %>
+                <div class="alert alert-danger" role="alert">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  <%= @contact.errors.get(:name).first %>  
+                </div>
               <% end %>
+            </p>
+            <div class="form-group">
+                <%= f.text_field :name, :placeholder => "Your Name *", :class => "form-control" %>
+            </div>
           </div>
-      </div>
+
+        <!-- Email Field -->
+        <div class="col-md-6">
+          <p class="help-block text-danger">
+            <% if @contact.errors.get(:email) %>
+              <div class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <%= @contact.errors.get(:email).first %>  
+              </div>
+            <% end %>
+          </p>
+            <div class="form-group">
+                <%= f.text_field :email, :placeholder => "Your Email *", :class => "form-control" %>
+            </div>
+          </div>  
+        </div>
+
+        <div class="row">
+
+          <!-- Phone Number -->
+          <div class="col-md-6">
+            <p class="help-block text-danger">
+              <% if @contact.errors.get(:phone) %>
+                <div class="alert alert-danger" role="alert">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  <%= @contact.errors.get(:phone).first %>  
+                </div>
+              <% end %>
+            </p>
+            <div class="form-group">
+                <%= f.text_field :phone, :placeholder => "Your Contact Number *", :class => "form-control" %>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+          
+            <!-- Occasion Field -->
+            <p class="help-block text-danger">
+              <% if @contact.errors.get(:occasion) %>
+                <div class="alert alert-danger" role="alert">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  <%= @contact.errors.get(:occasion).first %>  
+                </div>
+              <% end %>
+            </p>
+            <div class="form-group">
+                <%= f.text_field :occasion, :placeholder => "To whom you want to surprise *", :class => "form-control" %>
+            </div>
+          </div>
+        </div>
+
+          <!-- Event date -->
+          <p class="help-block text-danger">
+            <% if @contact.errors.get(:event_date) %>
+              <div class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <%= @contact.errors.get(:event_date).first %>  
+              </div>
+            <% end %>
+          </p>
+          <div class="form-group">
+          <div class='input-group date' id='event_picker'>
+                <%= f.text_field :event_date, :placeholder => "Event Date", :class => "form-control" %>
+              <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+          </div>
+          </div>
+
+          <p class="help-block text-danger">
+            <% if @contact.errors.get(:description) %>
+              <div class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <%= @contact.errors.get(:description).first %>  
+              </div>
+            <% end %>
+          </p>
+          <div class="form-group">
+              <%= f.text_area :description, :placeholder => "Your Message *", :class => "form-control" %>
+          </div>
+          <div class="col-lg-12 text-center">
+                  <div id="success"></div>
+                  <button type="submit" class="btn btn-xl">Send Message</button>
+      <% end %>
       <!-- ContactForm -->
 
   </div>
