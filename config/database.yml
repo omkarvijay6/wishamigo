@@ -15,14 +15,14 @@ default: &default
 #   adapter: sqlite3
 #   pool: 5
 #   timeout: 5000
-development:
-  adapter: postgresql
-  encoding: unicode
-  database: wishamigodb
-  host: localhost
-  pool: 5
-  username: postgres
-  password: vijay
+# development:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: wishamigodb
+#   host: localhost
+#   pool: 5
+#   username: postgres
+#   password: vijay
 # development:
 #   <<: *default
 #   database: db/development.sqlite3
@@ -34,7 +34,7 @@ development:
 #   <<: *default
 #   database: db/test.sqlite3
 
-production:
+development:
   adapter: postgresql
   encoding: unicode
   database: dpnm9qjerqbeh
