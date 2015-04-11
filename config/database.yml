@@ -19,8 +19,9 @@ development:
   adapter: postgresql
   encoding: unicode
   database: wishamigodb
+  host: localhost
   pool: 5
-  username: vijay
+  username: postgres
   password: vijay
 # development:
 #   <<: *default
