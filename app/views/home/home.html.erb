@@ -408,7 +408,7 @@
           </div>
           
           <div class="col-md-6">
-          
+
             <!-- Occasion Field -->
             <p class="help-block text-danger">
               <% if @contact.errors.get(:occasion) %>
@@ -424,23 +424,49 @@
           </div>
         </div>
 
+        <div class="row">
+
           <!-- Event date -->
-          <p class="help-block text-danger">
-            <% if @contact.errors.get(:event_date) %>
-              <div class="alert alert-danger" role="alert">
-                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                <%= @contact.errors.get(:event_date).first %>  
+          <div class="col-md-6">
+            <p class="help-block text-danger">
+              <% if @contact.errors.get(:event_date) %>
+                <div class="alert alert-danger" role="alert">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  <%= @contact.errors.get(:event_date).first %>  
+                </div>
+              <% end %>
+            </p>
+            <div class="form-group">
+              <div class='input-group date' id='event_picker'>
+                    <%= f.text_field :event_date, :placeholder => "Event Date", :class => "form-control" %>
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
               </div>
-            <% end %>
-          </p>
-          <div class="form-group">
-          <div class='input-group date' id='event_picker'>
-                <%= f.text_field :event_date, :placeholder => "Event Date", :class => "form-control" %>
-              <span class="input-group-addon">
-                  <span class="glyphicon glyphicon-calendar"></span>
-              </span>
+            </div>
           </div>
+
+          <!-- Event Time -->
+          <div class="col-md-6">
+            <p class="help-block text-danger">
+              <% if @contact.errors.get(:event_time) %>
+                <div class="alert alert-danger" role="alert">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  <%= @contact.errors.get(:event_time).first %>  
+                </div>
+              <% end %>
+            </p>
+            <div class="form-group">
+              <div class='input-group date' id='event_picker'>
+                    <%= f.text_field :event_time, :placeholder => "Event Time", :class => "form-control" %>
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+              </div>
+            </div>
           </div>
+
+        </div>
 
           <p class="help-block text-danger">
             <% if @contact.errors.get(:description) %>
