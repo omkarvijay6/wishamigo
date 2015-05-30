@@ -20,11 +20,9 @@
     <![endif]-->
   </head>
   <body id ="page-top" class="index">
-    <div class="container">
       <%= render 'layouts/header' %>
       <%= render 'shared/flash_messages' if !flash.empty? %>
       <%= yield %>
       <%= render 'layouts/footer' %>
-    </div>
   </body>
 </html>
