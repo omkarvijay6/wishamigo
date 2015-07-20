@@ -1,88 +1,33 @@
-<div class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-
-        <div class="navbar-header page-scroll">
-            
-            <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            
-            <a class="navbar-brand page-scroll" href="#page-top">Wish Amigo</a>
-        </div>
-
-        <div id="bs-example-navbar-collapse-1" class="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="hidden-active">
-                    <a href="#page-top"></a>
-                </li>
-                <li><a class="page-scroll" href="#services">Services</a>
-                </li>
-                <li><a class="page-scroll" href="#portfolio">Our Work</a>
-                </li>
-                <li><a class="page-scroll" href="#about">About</a>
-                </li>
-                <li><a class="page-scroll" href="#team">Team</a>
-                </li>
-                <li><a class="page-scroll" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<header>
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-      </ol>
-     
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-        <div class="item active">
-            <%= image_tag("anniversary.jpg", alt: "...")%>
-    <!--       <img src="http://placehold.it/1200x315" alt="..."> -->
-          <div class="carousel-caption">
-              <h3>Caption Text</h3>
-          </div>
-        </div>
-        <div class="item">
-          <%= image_tag("birthday.jpg", alt: "...")%>
-          <div class="carousel-caption">
-              <h3>Caption Text</h3>
-          </div>
-        </div>
-        <div class="item">
-          <%= image_tag("valentine.jpeg", alt: "...")%>
-          <div class="carousel-caption">
-              <h3>Caption Text</h3>
-          </div>
-        </div>
-      </div>
-     
-      <!-- Controls -->
-      <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-      </a>
-      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"> -->
-        <!-- <span class="glyphicon glyphicon-chevron-right"></span>
-      </a> -->
-    </div> <!-- Carousel -->
-    
-    <div class="container">
-        <div class="intro-text">
-            <div class="intro-lead-in">
-                Welcome to Wish Amigo!
+<header id="header">
+    <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>  
+                </button>
+                <a class="navbar-brand" href="">
+                    <h1>
+                        <i class="fa fa-flash"></i>
+                        Lares
+                    </h1>
+                </a>
             </div>
-            <h3>
-               It's Nice To Meet You
-            </h3>
-            <a class="page-scroll btn btn-primary" href="#services">Tell Me More</a>
+            <div class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="scroll"><a href="#home">Home</a></li>
+                    <li class="scroll"><a href="#features">Features</a></li>
+                    <li class="scroll"><a href="#services">Services</a></li>
+                    <li class="scroll"><a href="#portfolio">Portfolio</a></li>
+                    <li class="scroll"><a href="#about">About</a></li>
+                    <li class="scroll"><a href="#team">Team</a></li>
+                    <li class="scroll"><a href="#pricing">Pricing</a></li>
+                    <li class="scroll"><a href="#blog">Blog</a></li>
+                    <li class="scroll"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </nav>
 </header>
